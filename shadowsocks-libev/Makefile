@@ -41,7 +41,7 @@ define Package/shadowsocks-libev/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-local $(1)/usr/bin/ss-local
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-redir $(1)/usr/bin/ss-redir
 	$(INSTALL_BIN) ./files/shadowsocks.init $(1)/etc/init.d/shadowsocks
-	$(INSTALL_CONF) ./files/shadowsocks.json $(1)/etc/config/shadowsocks.json
+	$(INSTALL_CONF) ./files/shadowsocks.conf $(1)/etc/config/shadowsocks
 endef
 
 $(eval $(call BuildPackage,shadowsocks-libev))
